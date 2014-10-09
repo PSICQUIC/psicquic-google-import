@@ -119,12 +119,12 @@
                 <h4>Status of the service</h4>
                 <ui:include src="search/legend.xhtml"/>
             </section>
+            <h4>
+                <tr:outputText id="totalResultsTable" value="#{servicesTable.selectedResults}">
+                    <tr:convertNumber pattern="#,###"/>
+                </tr:outputText> selected interactions </h4>
             <tr:group rendered="#{servicesTable.selectedResults le config.clusteringSizeLimit and servicesTable.selectedResults ge 0}">
                 <section>
-                    <h4>
-                        <tr:outputText id="totalResultsTable" value="#{servicesTable.selectedResults}">
-                            <tr:convertNumber pattern="#,###"/>
-                        </tr:outputText> selected interactions </h4>
                     <ul class="statusMenu">
                         <li>
                             <!--Results selected-->
@@ -135,7 +135,6 @@
                                              value="Cluster this query"
                                              styleClass="submit"
                                              style="display: inline">
-
                             </h:commandButton>
                         </li>
                         <li>
@@ -181,6 +180,13 @@
                         </li>
                     </ul>
                 </section>
+            </tr:group>
+            <tr:group rendered="#{servicesTable.selectedResults gt config.clusteringSizeLimit}">
+                <p id="clusterMessage"
+                                 title="Information about the limits of the clustering"
+                                 style="display: inline">
+                    To many interactions to cluster. Please reduce the number to less than #{config.clusteringSizeLimit} interactions.
+                </p>
             </tr:group>
         </section>
 
