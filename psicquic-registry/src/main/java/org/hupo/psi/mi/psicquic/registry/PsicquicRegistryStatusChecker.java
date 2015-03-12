@@ -52,7 +52,7 @@ public class PsicquicRegistryStatusChecker {
 
     private Date lastRefreshed = new Date();
 
-    private int threadTimeOut = 10;
+    private int threadTimeOut = 5;
 
     private List<Future> runningTasks;
 
@@ -89,23 +89,23 @@ public class PsicquicRegistryStatusChecker {
             } catch (InterruptedException e) {
                 log.error("The registry task was interrupted, we cancel the task.", e);
                 if (!f.isCancelled()) {
-                    f.cancel(false);
+                    f.cancel(true);
                 }
             } catch (ExecutionException e) {
                 log.error("The registry task could not be executed, we cancel the task.", e);
                 if (!f.isCancelled()) {
-                    f.cancel(false);
+                    f.cancel(true);
                 }
             } catch (TimeoutException e) {
                 log.error("Service task stopped because of time out " + threadTimeOut + " seconds.");
 
                 if (!f.isCancelled()) {
-                    f.cancel(false);
+                    f.cancel(true);
                 }
             }catch (Throwable e) {
                 log.error("Service task stopped.",e);
                 if (!f.isCancelled()) {
-                    f.cancel(false);
+                    f.cancel(true);
                 }
             }
         }
