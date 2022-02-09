@@ -14,7 +14,7 @@
 
       <cxf.version>2.7.4</cxf.version>
       <spring.version>3.2.2.RELEASE</spring.version>
-      <struts.version>2.3.12</struts.version>
+      <struts.version>2.5.26</struts.version>
 
       <solr.version>3.6.2</solr.version>
       <calimocho.version>2.5.1-SNAPSHOT</calimocho.version>
