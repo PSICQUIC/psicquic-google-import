@@ -12,7 +12,7 @@
     <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-      <cxf.version>2.7.4</cxf.version>
+      <cxf.version>2.7.8</cxf.version>
       <spring.version>3.2.2.RELEASE</spring.version>
       <struts.version>2.3.12</struts.version>
 
