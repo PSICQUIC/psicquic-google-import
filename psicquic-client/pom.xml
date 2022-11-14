@@ -11,7 +11,7 @@
 
     <properties>
         <cxf.version>2.4.3</cxf.version>
-        <spring.version>3.1.2.RELEASE</spring.version>
+        <spring.version>3.2.18.RELEASE</spring.version>
 
         <bundle.namespace>org.hupo.psi.mi.psicquic.wsclient</bundle.namespace>
         <bundle.symbolicName>org.hupo.psi.mi.psicquic.wsclient</bundle.symbolicName>
