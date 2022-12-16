@@ -13,7 +13,7 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
       <cxf.version>2.7.4</cxf.version>
-      <spring.version>3.2.2.RELEASE</spring.version>
+      <spring.version>5.2.20.RELEASE</spring.version>
       <struts.version>2.3.12</struts.version>
 
       <solr.version>3.6.2</solr.version>
