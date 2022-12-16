@@ -41,7 +41,7 @@
 
         <download.all.storage.directory>download-cache</download.all.storage.directory>
 
-        <spring.version>3.1.2.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <spring.batch.version>2.1.8.RELEASE</spring.batch.version>
         <spring.security.version>3.1.2.RELEASE</spring.security.version>
     </properties>
